@@ -19,6 +19,7 @@ logging.basicConfig(format='%(asctime)s - %(name)s - %(levelname)s - %(message)s
 def start_bott(bot, updater):
     # print(updater)
     updater.message.reply_text('Hello {name}'.format(name=updater.message.from_user.last_name))
+    logging.info('Пользователь {username} нажал /start'.format(username=updater.message.chat.username))
 
 def chat(bot, updater):
     text = updater.message.text
