@@ -29,7 +29,7 @@ def chat(bot, updater):
 def main():
 
     # Настройки прокси
-    REQUEST_KWARGS = {'proxy_url': 'socks5://138.201.6.232:1080',
+    REQUEST_KWARGS = {'proxy_url': 'socks5://{ip}:{port}'.format(ip=settings.PROXY_IP, port=settings.PROXY_PORT),
         # Optional, if you need authentication:
         'urllib3_proxy_kwargs': {'username': '', 'password': ''}}
 
